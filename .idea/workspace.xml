@@ -1,13 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b0783d9d-338d-4212-97a7-167280952809" name="Changes" comment="first commit">
-      <change afterPath="$PROJECT_DIR$/data/spin_data.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/typed_data.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils.py" afterDir="false" />
+    <list default="true" id="b0783d9d-338d-4212-97a7-167280952809" name="Changes" comment="angles calculation and vector">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/data.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +35,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\RobertD\Desktop\MW Robert\django\acelgyro" />
       <recent name="C:\Users\RobertD\Desktop\MW Robert\django\acelgyro\data" />
       <recent name="C:\Users\RobertD\Desktop\MW Robert\django\acelgyro\assets" />
     </key>
@@ -109,7 +105,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671126842152</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="angles calculation and vector">
+      <created>1671222886768</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1671222886768</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -125,6 +128,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="first commit" />
+    <MESSAGE value="angles calculation and vector" />
+    <option name="LAST_COMMIT_MESSAGE" value="angles calculation and vector" />
   </component>
 </project>
