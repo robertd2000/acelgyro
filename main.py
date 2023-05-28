@@ -43,7 +43,8 @@ def reset_vector_data():
 
 
 def fill_sensors_data(target: SensorData, line: str, i: int = 1):
-    accel_x, accel_y, accel_z, gyro_x, gyro_y, gyro_z, *rest, time, _ = line.split('`')
+    (accel_x, accel_y, accel_z, gyro_x,
+     gyro_y, gyro_z, *rest, time, _) = line.split('`')
     target.accel_x.append(transform_data(accel_x))
     target.accel_y.append(transform_data(accel_y))
     target.accel_z.append(transform_data(accel_z))
@@ -66,6 +67,33 @@ def fill_vector_data(n, x, y, z):
     vector_data.Az[n].append(z)
 
 
+def get_coefficient(x: list[float], y: list[float], z: list[float]) -> (float, list[float]):
+    k = [90 - max(abs(xi), abs(yi), abs(zi)) for xi, yi, zi in zip(x, y, z)]
+    return mean(k), k
+
+
+def find_position(x: float, y: float, z: float) -> str:
+    x, y, z = abs(x), abs(y), abs(z)
+    position = ''
+    if max(x, y, z) < 0 and z > x and z > y:
+        position = 'Позиция 1. Поверните датчик!'
+    if max(x, y, z) < 0 and x > y and x > z:
+        position = 'Позиция 2. Поверните датчик!'
+    if max(x, y, z) < 0 and y > x and y > z:
+        position = 'Позиция 3. Поверните датчик!'
+    if max(x, y, z) > 0 and x > y and x > z:
+        position = 'Позиция 4. Поверните датчик!'
+    if max(x, y, z) > 0 and abs(x) > abs(z) and abs(x) > abs(y):
+        position = 'Позиция 5. Поверните датчик!'
+    if max(x, y, z) > 0 and abs(z) > abs(x) and abs(z) > abs(y):
+        position = 'Позиция 6. Датчик расположен вверх ногами. Переверните датчик!'
+
+    return position
+
+
+def find_positions(x: list[float], y: list[float], z: list[float]):
+    return [print(find_position(xi, yi, zi)) for xi, yi, zi in zip(x, y, z)]
+
 def draw(time: list[float], x: list[float], y: list[float], z: list[float], a=None):
     if a is None:
         a = []
@@ -82,7 +110,9 @@ def draw(time: list[float], x: list[float], y: list[float], z: list[float], a=No
 def fill_vector_matrix():
     matrix = []
     for i in range(len(vector_data.Ax) - 1):
-        matrix.append([0, 0, 0, mean(vector_data.Ax[i]), mean(vector_data.Ay[i]), mean(vector_data.Az[i])])
+        matrix.append([0, 0, 0, mean(vector_data.Ax[i]),
+                       mean(vector_data.Ay[i]),
+                       mean(vector_data.Az[i])])
 
     return np.array(matrix)
 
@@ -125,6 +155,8 @@ def main():
     # draw(file_data.time, file_data.accel_x,  file_data.accel_y, file_data.accel_z)
     draw(file_data.time, file_data.alpha, file_data.beta, file_data.gamma, file_data.angle)
     draw_vector()
+    print(get_coefficient(file_data.alpha, file_data.beta, file_data.gamma))
+    find_positions(file_data.alpha, file_data.beta, file_data.gamma)
     # scatter_draw(data.accel_x, data.accel_y)
     # scatter_draw(data.gyro_x, data.gyro_y)
 

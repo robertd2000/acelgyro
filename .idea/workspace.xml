@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b0783d9d-338d-4212-97a7-167280952809" name="Changes" comment="angles calculation and vector">
+    <list default="true" id="b0783d9d-338d-4212-97a7-167280952809" name="Changes" comment="add assets">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vector_1_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/vector_1_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vector_1_5.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/vector_1_5.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vector_1_6.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/vector_1_6.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,7 +34,7 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.IDE.editor.colors&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -40,7 +44,7 @@
       <recent name="C:\Users\RobertD\Desktop\MW Robert\django\acelgyro\assets" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.main (1)">
+  <component name="RunManager" selected="Python.main">
     <configuration name="main (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="acelgyro" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -112,7 +116,21 @@
       <option name="project" value="LOCAL" />
       <updated>1671222886768</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="add assets">
+      <created>1671223244185</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1671223244185</updated>
+    </task>
+    <task id="LOCAL-00004" summary="add assets">
+      <created>1671223261860</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1671223261860</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -129,6 +147,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first commit" />
     <MESSAGE value="angles calculation and vector" />
-    <option name="LAST_COMMIT_MESSAGE" value="angles calculation and vector" />
+    <MESSAGE value="add assets" />
+    <option name="LAST_COMMIT_MESSAGE" value="add assets" />
   </component>
 </project>
