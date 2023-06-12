@@ -9,7 +9,10 @@ vector_data = VectorData(Ax=[], Ay=[], Az=[])
 
 
 def get_data_from_file(filename: str) -> SensorData:
-    res = SensorData(accel_x=[], accel_y=[], accel_z=[], gyro_x=[], gyro_y=[], gyro_z=[], time=[], alpha=[], beta=[],
+    res = SensorData(accel_x=[], accel_y=[], 
+                     accel_z=[], gyro_x=[], 
+                     gyro_y=[], gyro_z=[], 
+                     time=[], alpha=[], beta=[],
                      gamma=[], angle=[])
     with open(file=filename) as f:
         i = 0
